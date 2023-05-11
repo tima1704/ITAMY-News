@@ -1,21 +1,24 @@
-import React from 'react';
-
-import cls from '../../Styles/HomeStyles/index.module.scss';
+import React from "react";
+import cls from "../../Styles/HomeStyles/index.module.scss";
+import Card from "../../Components/Card";
+import { EmptyCard } from "../../Components/common/emptyCard";
 
 export const Home = () => {
-  const [news, setNews] = React.useState(
-    JSON.parse(localStorage.getItem('news')) || []
+  const [allNews, setAllNews] = React.useState(
+    JSON.parse(localStorage.getItem("news")) || []
   );
 
-  React.useEffect(() => {
-
-  }, [news])
-
   return (
-    <div className={cls.container_home}>
-      
+    <div className={cls.home_container}>
+      {allNews.length === 0 ? (
+        <EmptyCard />
+      ) : (
+        allNews.map(item => (
+          <Card props={item} /> 
+        ))
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Home;

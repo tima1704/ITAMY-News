@@ -1,7 +1,7 @@
 import React from "react";
 import cls from "./index.module.scss";
 import { Link } from "react-router-dom";
-import { useTheme } from "../../../theme";
+import { useTheme } from "../../../Hooks/theme";
 const hedaerItems = [
   {
     id: 1,
@@ -22,6 +22,11 @@ const hedaerItems = [
     id: 4,
     item: "Criminal",
     route: "/criminal",
+  },
+  {
+    id: 5,
+    item: "Add news",
+    route: "/add_news",
   },
 ];
 
