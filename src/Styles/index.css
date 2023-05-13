@@ -20,6 +20,13 @@ body {
   background-color: var( --back-color );
 }
 
+button {
+  font-family: 'Raleway', sans-serif;
+}
+
+input {
+  font-family: 'Raleway', sans-serif;
+}
 
 a {
   text-decoration: none;

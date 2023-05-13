@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import cls from "../../Styles/AddNewsStyles/index.module.scss";
+import { useNavigate } from "react-router-dom";
 
 export const AddNews = () => {
   
@@ -16,11 +17,11 @@ export const AddNews = () => {
     register,
     formState: { errors },
     handleSubmit,
-    reset
+    reset,
   } = useForm();
 
   const handleSendNews = (ValueNews) => {
-    setNews((item) => [...item, { ...ValueNews, id: item.length }]);
+    setNews((item) => [...item, { ...ValueNews, id: item.length, }]);
     reset();
   };
 

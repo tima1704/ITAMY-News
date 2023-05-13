@@ -28,6 +28,11 @@ const hedaerItems = [
     item: "Add news",
     route: "/add_news",
   },
+  {
+    id: 6,
+    item: "Settings",
+    route: "/settings",
+  },
 ];
 
 export const Header = () => {
